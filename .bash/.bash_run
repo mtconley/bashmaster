@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+load_file() { if [ -f $@ ]; then echo $@; . $@; fi }
+load_dir() { for i in $@; do load_file "$i"; done }
+
+# Load bash export files
+load_dir ./configs/*
+
+# Load bash script files
+load_dir ./scripts/*
