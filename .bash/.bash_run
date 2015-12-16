@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-load_file() { if [ -f $@ ]; then . $@; fi }
-load_dir() { for i in $@; do load_file "$i"; done }
+load_file() { . $@; }
+load_dir() { for i in `ls -ap $@ | grep -v /`; do load_file "$@/$i"; done }
 
 # Load bash export files
-load_dir ./configs/*
+load_dir $BASH_DIR/configs
 
 # Load bash script files
-load_dir ./scripts/*
+load_dir $BASH_DIR/scripts
