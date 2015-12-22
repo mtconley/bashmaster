@@ -1,13 +1,5 @@
 ### Aliases
 
-# common programs
-alias bettertouchtool="open -a /Applications/BetterTouchTool.app/Contents/MacOS/BetterTouchTool"
-alias outlook="open -a /Applications/Microsoft\ Office\ 2011/Microsoft\ Outlook.app/Contents/MacOS/Microsoft\ Outlook"
-alias slack="open -a /Applications/Slack.app/Contents/MacOS/Slack"
-alias chrome="open -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias iterm="open -a /Applications/iTerm.app/Contents/MacOs/iTerm"
-alias xcode="open -a /Applications/Xcode.app/Contents/MacOS/Xcode"
-
 # Open specified files in Sublime Text
 # "s ." will open the current directory in Sublime
 alias s="subl -a ."
@@ -46,6 +38,8 @@ alias sudo='sudo '
 # Colored up cat!
 # You must install Pygments first - "sudo easy_install Pygments"
 alias cat='pygmentize -O style=${color_style} -f console256 -g'
+# sudo npm install -g json
+alias json='json | pygmentize -l json -O style=${color_style} -f console256 -g'
 
 # Git
 # You must install Git first
@@ -54,6 +48,21 @@ alias ga='git add .'
 alias gc='git commit -m' # requires you to type a commit message
 alias gp='git push'
 alias grm='git rm $(git ls-files --deleted)'
+
+
+# common programs
+alias bettertouchtool="open -a /Applications/BetterTouchTool.app/Contents/MacOS/BetterTouchTool"
+alias outlook="open -a /Applications/Microsoft\ Office\ 2011/Microsoft\ Outlook.app/Contents/MacOS/Microsoft\ Outlook"
+alias slack="open -a /Applications/Slack.app/Contents/MacOS/Slack"
+alias chrome="open -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias iterm="open -a /Applications/iTerm.app/Contents/MacOs/iTerm"
+alias xcode="open -a /Applications/Xcode.app/Contents/MacOS/Xcode"
+
+
+alias width='tput cols'
+alias height='tput lines'
+
+
 
 alias root='cd $root'
 alias stodo='subl -a ~/Documents/root/docs/notes/ToDo.md'
