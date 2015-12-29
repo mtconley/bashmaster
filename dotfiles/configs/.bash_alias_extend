@@ -1,0 +1,29 @@
+### Aliases - extended functionality of existing commands
+
+# Color LS
+alias ls="gls --color=auto --group-directories-first" #brew install coreutils
+alias l="ls -lFG" # all files, in long format
+alias la="ls -laFG" # all files inc dotfiles, in long format
+alias lsd='ls -lFG | grep "^d"' # only directories
+
+# Color tree -- brew install tree
+alias tree="tree -C --dirsfirst"
+
+alias tidy="tidy -omit -q -indent "
+# Colored up cat!
+color_style="monokai"
+# You must install Pygments first - "sudo easy_install Pygments"
+alias cat='pygments'
+# sudo npm install -g json
+alias json='json | pygments json'
+# you must install tidy-html5 first -- "brew install tidy-html5"
+alias html='tidy | pygments html'
+alias xml='tidy -xml | pygments html'
+# you mus install csvkit first -- pip install csvkit
+alias csv='csvlook | pygments numpy'
+
+
+alias cp='cp -iv'
+alias df='df -Ph'
+alias mkdir='mkdir -pv'
+alias mv='mv -iv'
