@@ -9,6 +9,7 @@ color_my_prompt() {
     PWD | grep -q '/root' && text=$cwdpath_below || text=$cwdpath_above
     local __cur_location=$text
     local __git_branch_color="\[\033[1;96m\]"
+    # __git_branch must have command wrapped in single quotes to update on checkout...
     local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
     local __prompt_tail="\[\033[38;5;123m\]\\$:" # prompt color and symbol
     local __last_color="\[\033[0m\]" # command color
