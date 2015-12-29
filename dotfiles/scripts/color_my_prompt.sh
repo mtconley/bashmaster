@@ -2,12 +2,12 @@
 color_my_prompt() {
     #local __user_and_host="\[\033[01;32m\]\u@\h"
 
-    marker=$'\033[38;5;229m\xe2\x96\xb6\x20'
+    marker=$'\xe2\x96\xb6\x20'
     cwd="${PWD##*/root}"
     cwdpath_below="$marker$cwd"
-    cwdpath_above="\[\033[38;5;229m\]\w"
+    cwdpath_above="$cwd"
     PWD | grep -q '/root' && text=$cwdpath_below || text=$cwdpath_above
-    local __cur_location=$text
+    local __cur_location="\[\033[38;5;229m\]$text"
     local __git_branch_color="\[\033[1;96m\]"
     # __git_branch must have command wrapped in single quotes to update on checkout...
     local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
