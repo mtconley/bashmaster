@@ -12,7 +12,7 @@ alias tree="tree -C --dirsfirst"
 alias tidy="tidy -omit -q -indent "
 # Colored up cat!
 # You must install Pygments first - "pip install pygments"
-alias pyg='pygments'
+alias pyg='pygments' # use in place of cat
 # sudo npm install -g json
 alias json='json | pyg json'
 # you must install tidy-html5 first -- "brew install tidy-html5"

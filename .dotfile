@@ -1,0 +1,747 @@
+#!/bin/bash
+BigT() {
+	center <<- ---
+		                      ▄▄▄▄▄▄▄▄▄███████████████████████▄▄▄▄▄▄▄▄▄                      
+		             ▄▄▄▄███████████████████████████████████████████████████▄▄▄▄             
+		       ▄▄▄█████████████████████████████████████████████████████████████████▄▄▄       
+		  ▄▄██████████████████▀▀▀▀▀▀▀▀▀                       ▀▀▀▀▀▀▀▀▀██████████████████▄▄  
+		█████████████▀▀▀▀        ▄▄▄▄▄▄▄                     ▄▄▄▄▄▄▄        ▀▀▀▀█████████████
+		▐██████▀▀▀      ▄▄▄▄█████████████▄                 ▄█████████████▄▄▄▄      ▀▀▀██████▌
+		 ▜█▀▀     ▄▄▄██████████████████████▄             ▄██████████████████████▄▄▄     ▀▀█▛ 
+		     ▄▄██████████████████████████████▄         ▄██████████████████████████████▄▄     
+		   ▜███████████████████████████████████▄     ▄███████████████████████████████████▛   
+		    ▀█████████████████▀▀▀▀▀▀▀▀▀██████████▄ ▄██████████▀▀▀▀▀▀▀▀▀█████████████████▀    
+		      ▀██████████▀▀            ▐█████████████████████▌            ▀▀██████████▀      
+		        ▀██████▛                █████████████████████                ▜██████▀        
+		           ▀▀█▛                 █████████████████████                 ▜█▀▀           
+		                                ▐███████████████████▌                                
+		                                ▐███████████████████▌                                
+		                                 ███████████████████                                 
+		                                 ███████████████████                                 
+		                                 ▐█████████████████▌                                 
+		                                 ▐█████████████████▌                                 
+		                                  █████████████████                                  
+		                                  █████████████████                                  
+		                                  ▐███████████████▌                                  
+		                                  ▐███████████████▌                                  
+		                                   ███████████████                                   
+		                                   ███████████████                                   
+		                                   ▐█████████████▌                                   
+		                                   ▐█████████████▌                                   
+		                                    █████████████                                    
+		                                    █████████████                                    
+		                                    ▐███████████▌                                    
+		                                    ▐███████████▌                                    
+		                                     ███████████                                     
+		                                     ▐█████████▌                                     
+		                                     ▐█████████▌                                     
+		                                      █████████                                      
+		                                      ▐███████▌                                      
+		                                      ▐███████▌                                      
+		                                       ███████                                       
+		                                       ▐█████▌                                       
+		                                       ▐█████▌                                       
+		                                        █████                                        
+		                                        ▐███▌                                        
+		                                         ███                                         
+		                                         ▐█▌                                         
+		                                          █                                          
+	---
+}
+
+tesla() {
+	center <<- ---
+		▜███████████████▛     ▜███████████████▛     ████████████████▛     ███                 ▜███████████████▛
+		 ▜█████████████▛       ▜█████████████▛      ███████████████▛      ███                  ▜█████████████▛ 
+		       ███                                  ███                   ███                                  
+		       ███                                  ███                   ███                                  
+		       ███            ▜███████████████▛     █████████████████     ███                 █████████████████
+		       ███             ▜█████████████▛      █████████████████     ███                 █████████████████
+		       ███                                                ███     ███                 ███           ███
+		       ███                                                ███     ███                 ███           ███
+		       ███            ▜███████████████▛      ▟███████████████     ██████████████▛     ███           ███
+		       ███             ▜█████████████▛      ▟████████████████     █████████████▛      ███           ███
+	---
+}
+
+alias logo='n; T; n; tesla'
+
+miniT() {
+	center <<- ---
+		      ▂▂▄▄▄▆▆▆███████████▆▆▆▄▄▄▂▂      
+		 ▂▄▆██████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀██████▆▄▂ 
+		▜███▀▀▂▄▄▆▆███▄         ▄███▆▆▄▄▂▀▀███▛
+		 ▀▂▄▆███████████▄     ▄███████████▆▄▂▀ 
+		  ▜███████████████▄ ▄███████████████▛  
+		   ▀██▛▀▀     ▜█████████▛     ▀▀▜██▀   
+		     ▀        ▐█████████▌        ▀     
+		               █████████               
+		               █████████               
+		               ▐███████▌               
+		               ▐███████▌               
+		                ███████                
+		                ███████                
+		                ▐█████▌                
+		                ▐█████▌                
+		                 █████                 
+		                 ▐███▌                 
+		                 ▐███▌                 
+		                  ███                  
+		                  ▐█▌                  
+		                   █                   
+	---
+}
+
+minitesla() {
+	center <<- ---
+		▜█████▛  ▜█████▛  ██████▛  █        ▜█████▛
+		   █              █        █               
+		   █     ▜█████▛  ███████  █        ███████
+		   █                    █  █        █     █
+		   █     ▜█████▛  ▟██████  ██████▛  █     █
+	---
+}
+
+
+alias minilogo='n; n; miniT; n; minitesla; n; n'
+
+# Colors
+color() {
+	export $1=`echo -e "\x1b[$2m"`
+	alias $1="echo \$$1"
+}
+
+color black '0;30'
+color red '0;31'
+color green '0;32'
+color yellow '0;33'
+color blue '0;34'
+color magenta '0;35'
+color cyan '0;36'
+color white '0;37'
+color BLACK '1;30'
+color RED '1;31'
+color GREEN '1;32'
+color YELLOW '1;33'
+color BLUE '1;34'
+color MAGENTA '1;35'
+color CYAN '1;36'
+color WHITE '1;37'
+color endcolor ''
+
+alias ct='colortable'
+colortable() {
+	for fgbg in 38 48 ; {
+		for color in {0..256} ; {
+			echo -en "\e[${fgbg};5;${color}m ${color}\t\e[0m"
+			[[ $((($color + 1) % 10)) == 0 ]] && echo
+		}
+		echo
+	}
+}
+
+# Text
+alias e='echo -e'
+alias n='printf "\n"'
+alias lc='wc -l'
+alias cols='column -t -s'
+
+split() {
+	(tr "$2" ' ' <<< $1)
+}
+
+slice() {
+	ARRAY=($1)
+	eval "echo \${ARRAY[@]:$2:$3}"
+}
+
+repeatstr() {
+	printf "$1%.0s" `seq 1 $2`
+}
+
+alias re='replace'
+replace() {
+	local cmd=""
+	local end="g"
+	while [ $# -gt 0 ]; do
+		[ "$1" = "-i" ] && end="${end}I" && shift && continue
+		[ "$1" = "-m" ] && cmd="${cmd}1h;1!H;\${;g;" && end="${end};p}" && shift && continue
+
+		if [ -z "$2" ]
+		then
+			cmd="${cmd}s|$1|$black[$yellow\0$black]$endcolor|${end};"
+			shift
+		else
+			cmd="${cmd}s|$1|$2|${end};"
+			shift
+			shift
+		fi
+
+		end="g"
+	done
+	gsed -rn "${cmd}p"
+	echo "${cmd}p"
+}
+
+md5() {
+	md5sum <<< $1 | cut -f1 -d ' '
+}
+
+downcase() {
+	tr '[:upper:]' '[:lower:]' <<< $1
+}
+
+upcase() {
+	tr '[:lower:]' '[:upper:]' <<< $1
+}
+
+center() {
+	columns=$(width)
+	text=""
+	while IFS= read -r line; do
+		text="$text`repeatstr ' ' $(max 0 $(( (columns - ${#line}) / 2 )) )`$line\n"
+	done
+	printf "$text"
+}
+
+# Sets
+alias U='union'
+union() {
+	sort -u $1 $2
+}
+
+alias D='difference'
+difference() {
+	sort $1 $2 | uniq -u
+}
+
+alias I='intersection'
+intersection() {
+	sort $1 $2 | uniq -d
+}
+
+alias C='complement'
+complement() {
+	comm -23 <(sort $1) <(sort $2)
+}
+
+alias u="perl -ne 'print unless \$seen{\$_}++'"
+
+# Math
+∑() { # option + w
+	[[ $# -eq 0 ]] && cat | awk '{ s+=$1 } END { print s }' || \
+	[[ $# -eq 1 ]] && awk '{ s+=$1 } END { print s }' $1 || \
+	gsed 's| | \+ |g' <<< "$@" | bc
+}
+
+π() { # option + p
+	[[ $# -eq 0 ]] && cat | awk '{ s*=$1 } END { print s }' || \
+	[[ $# -eq 1 ]] && awk '{ s*=$1 } END { print s }' $1 || \
+	gsed 's| | \* |g' <<< "$@" | bc
+}
+
+factorial() { 
+	(echo 1; seq $1) | paste -s -d\* | bc
+}
+
+max() {
+	[ $1 -gt $2 ] && echo $1 || echo $2
+}
+
+min() {
+	[ $1 -lt $2 ] && echo $1 || echo $2
+}
+
+# Control
+each() {
+	while read line; do
+		for cmd in "$@"; {
+			$cmd $line
+		}
+	done
+}
+
+# Filesys
+export CLICOLOR=1
+export LSCOLORS=exfxcxdxbxegedabagacad
+
+alias f='finder'
+finder() {
+	ag --nogroup --column --nocolor --ignore 'tmp' --ignore 'log' $1 | \
+	gsed "s|$1|$yellow\0$endcolor|g" | \
+	gsed -rn "s|([^:]*:[0-9]*:[0-9]*):[ \t]*(.*)|$blue\1$endcolor\🔍\2|p" | \
+	cut -c1-$((4 * `width`)) | \
+	cols '🔍'
+}
+
+alias ff='filefinder'
+filefinder() {
+	find . -iname "*$1*" | gsed 's|^./||'
+}
+
+alias t='tree -C'
+
+fuzzyname() {
+	if [ -z $2 ]
+	then
+		COMPREPLY=( `ls -a` )
+	else
+		DIRPATH=`<<< "$2" gsed "s|~|$HOME|" | gsed 's|[^/]*$||'`
+		BASENAME=`<<< "$2" gsed "s|~|$HOME|" | gsed 's|.*/||'`
+		FILTER=`<<< "$BASENAME" gsed 's|.|\0.*|g'`
+		COMPREPLY=( `ls -a $DIRPATH | grep -i "$FILTER" | gsed "s|^|$DIRPATH|g"` )
+	fi
+}
+complete -o nospace -o filenames -F fuzzyname cat cd cp mv ls rm
+
+fuzzypath() {
+	if [ -z $2 ]
+	then
+		COMPREPLY=( `ls -a` )
+	else
+		FILTER=`<<< "$2" gsed 's|.|\0*|g'`
+		COMPREPLY=( `find . -ipath "*$FILTER" | gsed 's|^./||' | grep -v '^\.git'` )
+	fi
+}
+complete -o nospace -F fuzzypath s
+
+alias ~='cd ~; .'
+alias .='ls -a -G'
+alias ..='cd ..; .'
+
+for level in {2..10} ; {
+	alias ..$level="cd `repeatstr '../' $level`; ."
+}
+
+alias -- -='cd -; .'
+
+alias x='extract'
+extract() {
+	if [ -f $1 ] ; then
+		case $1 in
+			*.tar.bz2)   tar xjf $1 ;;
+			*.tar.gz)    tar xzf $1 ;;
+			*.bz2)       bunzip2 $1 ;;
+			*.rar)       rar x $1 ;;
+			*.gz)        gunzip $1 ;;
+			*.tar)       tar xf $1 ;;
+			*.tbz2)      tar xjf $1 ;;
+			*.tgz)       tar xzf $1 ;;
+			*.zip)       unzip $1 ;;
+			*.Z)         uncompress $1 ;;
+			*.7z)        7z x $1 ;;
+			*)           echo "'$1' cannot be extracted via extract()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
+alias o='open -a'
+
+# Net
+post() {
+	curl --data "$2" "$1"
+}
+
+put() {
+	curl -s "$1"
+}
+
+get() {
+	curl "$1"
+}
+
+delete() {
+	curl -X DELETE "$1"
+}
+
+alias port='lsof -i'
+alias inet='ifconfig | grep "inet "'
+alias exip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias hosts='s /private/etc/hosts'
+
+google() {
+	chrome "http://www.google.com/#q=$1"
+}
+
+# System
+alias cpus='sysctl -n hw.ncpu'
+
+alias \?='defined'
+defined() {
+	for ask in "$@"; {
+		alias $ask 2>/dev/null || declare -f $ask || which $ask
+	}
+}
+
+p() {
+	ps aux | head -1
+	ps aux | grep $1 | grep -v grep
+}
+
+pid() {
+	ps aux | grep $1 | grep -v grep | awk '{ print $2 }'
+}
+
+command_not_found_handle() {
+	if [ -f $1 ] ; then
+		cat $1
+	elif [ -d `sed 's|/$||' <<< $1` ] ; then
+		cd $1
+		.
+	else
+		echo "'$1' ?"
+	fi
+}
+
+nulltab() {
+	COMPREPLY=( `ls -a` )
+}
+complete -o nospace -o filenames -F nulltab -E
+
+alias als='compgen -a | each "alias"'
+
+# Terminal
+alias width='tput cols'
+alias height='tput lines'
+
+alias h='searchhistory'
+searchhistory() {
+	history | grep "$1"
+}
+
+export HISTSIZE=5000
+export HISTCONTROL=ignoredups:erasedups
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+shopt -s histappend
+
+shopt -s globstar
+
+export up=`echo -e "\x1b[1A"`
+export down=`echo -e "\x1b[1B"`
+export left=`echo -e "\x1b[1D"`
+export right=`echo -e "\x1b[1C"`
+
+tab() {
+	osascript \
+		-e 'tell application "Terminal" to activate' \
+		-e 'tell application "System Events" to tell process "Terminal" to keystroke "t" using command down' \
+		-e "tell application \"Terminal\" to do script \"$1\" in selected tab of the front window"
+}
+
+tabname() {
+	printf "\e]1;$1\a"
+}
+
+alias c='clear'
+
+# Profile
+alias spf='source ~/.profile'
+alias pf='o "Sublime Text" ~/.profile'
+
+# Browsers
+alias chrome='open -a /Applications/Google\ Chrome.app'
+alias firefox='open -a /Applications/Firefox.app'
+alias safari='open -a /Applications/Safari.app'
+
+# Art
+alias photoshop='open -a /Applications/Adobe\ Photoshop*/Adobe\ Photoshop*.app'
+
+# Server
+alias ac='subl /etc/apache2/httpd.conf'
+alias dr='cd /Library/WebServer/Documents; .'
+alias ss='python -m SimpleHTTPServer'
+
+# Git
+alias gcf='subl ~/.gitconfig'
+alias gb='n && git branch'
+alias gbn='git rev-parse --abbrev-ref HEAD 2>/dev/null'
+alias gbh='git rev-parse HEAD 2>/dev/null'
+alias gbcl='gb | grep -v -e \* -e master | each "git branch -D"'
+alias gdf='gd --name-only'
+alias gco='git checkout'
+alias gcb='gco -b'
+alias gcfl='git ls-files -u | cut -f 2 | sort -u'
+alias gcm='git commit -am'
+alias gm='git merge'
+alias gs='git stash'
+alias gsa='gs apply'
+alias gl='git --no-pager log -n $(( $(height) - 8 )) -w --reverse --pretty=tformat:"%C(black)%cr%Creset|%C(yellow)%an%Creset|%s %C(blue)%h%Creset%C(red)%d%Creset" | cols "|"'
+alias gst='git status'
+alias gcp='git cherry-pick'
+alias gcl='git clean -f -d'
+alias gpo='git fetch && git pull origin'
+alias gu='git fetch --all && git pull origin $(gbn)'
+alias gpu='git push origin $(gbn)'
+alias gr='git reset'
+alias grh='gr --hard'
+alias grv='git revert -m 1'
+alias gca='git commit --amend -a --no-edit'
+alias grom='git fetch origin master && git rebase origin/master'
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
+alias gnodb='git update-index --assume-unchanged config/database.yml'
+
+gitbranchcolor() {
+	if [ -n "`gbn 2>/dev/null`" ] ; then
+		if [ -n "`gdf`" ] ; then
+			red
+		elif [ 0 -eq $(git rev-list $(gbn)..origin/$(gbn) --count 2>/dev/null) ] 2>/dev/null && [ 0 -eq $(git rev-list origin/$(gbn)..$(gbn) --count) ] ; then
+			green
+		else
+			yellow
+		fi
+	fi
+}
+
+alias gd='gitdiff'
+gitdiff() {
+	git diff $1 | \
+	grep -v -e '^index' -e '^+++' -e '^---' | \
+	gsed "s|diff --git a/.* b/|\n$RED|g" | \
+	gsed "s|^@@ .*$|$blue\0$endcolor|g" | \
+	gsed "s|^\+.*$|$white\0$endcolor|g" | \
+	gsed "s|^\-.*$|$black\0$endcolor|g"
+}
+
+alias gdc='gitdiffcommit'
+gitdiffcommit() {
+	[ -z "$1" ] && gd HEAD~1 || gd $1~1
+}
+
+alias gt='gittag'
+gittag() {
+	git tag $1
+	gpu --tags
+}
+
+gittab() {
+	if [[ $3 == *"--"* ]] ; then
+		COMPREPLY=( `compgen -f $2` )
+	else
+		COMPREPLY=( `gb | gsed 's|..||' | grep -i "$2"` )
+	fi
+}
+complete -o nospace -o filenames -F gittab gitdiff gco gpo gb gm
+
+# Editor
+export EDITOR='subl'
+export GIT_EDITOR='subl --wait'
+
+alias s='subl'
+
+# Dev
+alias b='bundle'
+alias r='rspec'
+alias rc='rails c'
+
+export JUMP_PROD='sjc04-jx1.teslamotors.com'
+export JUMP_ENG='jxa01.eng.sjc.vnet'
+export JUMP_DEV='sjc04-jx2.teslamotors.com' # deprecated
+
+jump_box() {
+	clear
+	minilogo
+	endcolor
+	ssh $1
+	clear
+}
+
+alias j='jump'
+jump() {
+	case $1 in
+		p) red; jump_box $JUMP_PROD ;;
+		e) yellow; jump_box $JUMP_ENG ;;
+		d) blue; jump_box $JUMP_DEV ;; # deprecated
+	esac
+}
+
+jump_service() {
+	tabname $3:$2
+	margin=`repeatstr ' ' $(max 0 $(( ($(width) - 37) / 2 )) )`
+	cat <<- ---
+		$margin $black jump box: $white $1
+		$margin $black     host: $white $2
+		$margin $black        @: $white localhost:$3
+	---
+	endcolor
+	ssh -L $3:$2 $1 "while true; do sleep 5; printf '\r'; done"
+	clear
+}
+
+jump_console() {
+	tabname $2:$3
+	margin=`repeatstr ' ' $(max 0 $(( ($(width) - 34) / 2 )) )`
+	cat <<- ---
+		$margin $black host: $white $1
+		$margin $black user: $white $2
+		$margin $black    ⚡: $white rails c $3
+	---
+	endcolor
+	ssh -t $1 "sudo su - $2 -s /bin/bash -c 'PATH=/opt/tesla/$2/bin:\$PATH rails c $3'"
+	clear
+}
+
+jump_term() {
+	tabname $2:$3
+	margin=`repeatstr ' ' $(max 0 $(( ($(width) - 34) / 2 )) )`
+	cat <<- ---
+		$margin $black host: $white $1
+		$margin $black user: $white $2
+	---
+	endcolor
+	ssh -t $1 "sudo su - $2 -s /bin/bash"
+	clear
+}
+
+jump_diff() {
+	HASH=`ssh -t $1 "rpm -qa | grep tesla-$2" 2>/dev/null | awk -F \- '{ print $3 }'`
+	margin=`repeatstr ' ' $(max 0 $(( ($(width) - 50) / 2 )) )`
+	cat <<- ---
+		$margin $black   host: $white $1
+		$margin $black commit: $blue $HASH
+	---
+	endcolor
+	cd $3
+	gco master
+	gu
+	gd $HASH..master
+}
+
+project() {
+	alias $1="$2"
+	source /dev/stdin <<- ----
+		$2() {
+			case \$1 in
+				p) 
+					red
+					clear
+					minilogo
+					case \$2 in
+						c) jump_console $(slice "$(split $6 ':')" 0 1) $2 production ;;
+						t) jump_term $(slice "$(split $6 ':')" 0 1) $2 production ;;
+						d) jump_diff $(slice "$(split $6 ':')" 0 1) $2 $3 ;;
+						*) jump_service $JUMP_PROD $6 $7 ;;
+					esac
+					;;
+				e) 
+					yellow
+					clear
+					minilogo
+					case \$2 in
+						c) jump_console $(slice "$(split $5 ':')" 0 1) $2 engineering ;;
+						t) jump_term $(slice "$(split $5 ':')" 0 1) $2 engineering ;;
+						d) jump_diff $(slice "$(split $5 ':')" 0 1) $2 $3 ;;
+						*) jump_service $JUMP_ENG $5 $7 ;;
+					esac
+					;;
+				d) 
+					blue
+					clear
+					minilogo
+					case \$2 in
+						c) jump_console $(slice "$(split $4 ':')" 0 1) $2 development ;;
+						t) jump_term $(slice "$(split $4 ':')" 0 1) $2 development ;;
+						d) jump_diff $(slice "$(split $4 ':')" 0 1) $2 $3 ;;
+						*) jump_service $JUMP_DEV $4 $7 ;;
+					esac
+					;;
+				l) 
+					cd $3
+					tabname $7:$2
+					green
+					clear
+					minilogo
+					margin=\`repeatstr ' ' \$(max 0 \$(( (\$(width) - 30) / 2 )) )\`
+					cat <<- ---
+						\$margin $black service: $white $2 $magenta\$(gbn)
+						\$margin $black  commit: $blue \$(git rev-parse --short HEAD) $endcolor\$(git show -s --format=%cd --date=short \$(git rev-parse --short HEAD))
+						\$margin $black    host: $white localhost:$7
+					---
+					endcolor
+					case \$2 in
+						c) rails c ;;
+						*) rails s -p$7 ;;
+					esac
+					clear
+					tabname $2
+					;;
+				s)
+					cd $3
+					tabname $2
+					subl .
+					;;
+				*)
+					cd $3
+					tabname $2
+					gu
+					n
+					t --matchdirs -I 'tmp|coverage|assets'
+					n
+					gl | tail -5
+					;;
+			esac
+		}
+	----
+
+	if [[ $PROJECTS != *"$2"* ]] ; then
+		export PROJECTS="$PROJECTS\n$1 $2"
+	fi
+}
+
+project con consul ~/tesla_consul consul01.dev.tesla:80 con01.eng.sjc.vnet:80 consul01.vn.teslamotors.com:80 8500
+project phb power_hub ~/power_hub '' '' '' 9010
+project hmb homebase ~/homebase homebase01.dev.tesla:80 '' '' 8070
+project gar garage ~/garage '' gar01.eng.sjc.vnet:80 garage03.vn.teslamotors.com:80 9000
+project frm firmware ~/firmware '' frm01.eng.sjc.vnet:80 firmware05.vn.teslamotors.com:80 8090
+project msh mothership ~/mothership '' msh01.eng.sjc.vnet:80 mothership06.vn.teslamotors.com:80 8080
+project oap owner_api ~/owner_api '' oap01.eng.sjc.vnet:4567 owner-api01.vn.teslamotors.com:80 8060
+project fap fleet_api ~/owner_api '' '' owner-api05.vn.teslamotors.com:80 8060
+project pat pathfinder ~/pathfinder '' pat01.eng.sjc.vnet:80 pathfinder01.vn.teslamotors.com:80 8050
+
+project utl utils ~/tesla_utils
+project ent entities ~/tesla_entities
+project srv services ~/tesla_services
+project net networking ~/tesla_networking
+project sto storage ~/tesla_storage
+project trt trt ~/tesla_trt
+
+project chr chef-redis ~/chef-redis
+project cho chef-owner ~/chef-ownerapi
+
+project els elastic_search ~/tesladex '' els01.eng.sjc.vnet:9200 els01.vn.teslamotors.com:9200 9200
+project sql mysql ~ mysql01.dev.tesla:80 sql01.eng.sjc.vnet:3306 mysql01.vn.teslamotors.com:3306 1337
+
+alias pjs='echo -e $PROJECTS | sort'
+
+# rsync -av -e "ssh -A mmessing@$JUMP_ENG ssh" ~/firmware mmessing@tbx01:/home/mmessing
+# rsync -av -e "ssh -A mmessing@$JUMP_PROD ssh" ~/firmware mmessing@firmware06:/home/mmessing
+
+# rsync -av ~/oculus devops@gbot.dev.tesla:/home/devops
+
+path() {
+	if [ -z "$1" ] ; then
+		e "$PATH" | tr ":" "\n"
+	else
+		export PATH="$PATH:$1"
+	fi
+}
+
+if [[ $PATH == *"$HOME/bin"* ]] ; then
+	clear
+else
+	export JAVA='/usr/bin/java'
+	export GOPATH=$HOME
+	path "$HOME/bin"
+	path "$HOME/.rvm/bin"
+	path "/usr/local/mysql/bin"
+	path "/Applications/Postgres.app/Contents/Versions/9.4/bin"
+	black; logo; endcolor
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Prompt
+PS1="\n\n$endcolor@ \w/ \$(gitbranchcolor)\$(gbn) $black\[\@ \d\]$endcolor\n⚡ "
