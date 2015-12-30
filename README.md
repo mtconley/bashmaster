@@ -5,6 +5,8 @@ cd bashmaster/source
 bash install.sh
 ```
 
+Bashmaster must be installed from the `source` directory as demonstrated above
+
 ##Examples
 ```
 bashmaster checkout branch1
@@ -14,7 +16,7 @@ bashmaster patch=dotfiles/configs/bash_alias_extend from=branch3
 bashmaster list
 ```
 
-##TODO
-* Allow for branch checkout outside of directory
-* Do not allow editing of none home nodename branches??
-* set `branch.my_branch.merge` in configuration file??
+###TODO
+* Clean up argument parsing
+    * how options are accessed
+    * how files are found
