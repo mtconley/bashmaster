@@ -5,13 +5,13 @@ load_file_dir() { for i in `ls -ap $@ | grep -v /`; do load_file "$@/$i"; done }
 load_script_dir() { for i in `ls -ap $@ | grep -v /`; do load_script "$@/$i"; done }
 
 # Load bash script files
-load_script_dir $BASH_DIR/scripts
+load_script_dir $BASH_DIR/dotfiles/scripts
 
 # Load bash export files
-load_file_dir $BASH_DIR/configs
+load_file_dir $BASH_DIR/dotfiles/configs
 
 # Ensure core bashmaster functionality is present
-load_file $BASH_DIR/../source/core.sh
+load_file $BASH_DIR/source/core.sh
 
 # Load personal .bashrc after everything else
 load_file ~/.bashrc
