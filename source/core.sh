@@ -26,11 +26,13 @@ bashmaster(){
             home)
                 name=`uname -n`
                 git checkout $name
+                unalias git
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
             master)
                 git checkout master
+                unalias git
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
@@ -54,12 +56,12 @@ bashmaster(){
     case ${ACTION} in
         get)
             alias git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
-            git checkout ${BRANCH_NAME} ${FILENAME}
+            `git checkout ${BRANCH_NAME} ${FILENAME}`
             unalias git
         ;;
         patch)
             alias git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
-            git checkout --patch ${BRANCH_NAME} ${FILENAME}
+            `git checkout --patch ${BRANCH_NAME} ${FILENAME}`
             unalias git
         ;;
     esac
