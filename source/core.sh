@@ -24,13 +24,13 @@ bashmaster(){
             ;;
             home)
                 name=`uname -n`
-                git checkout $name
-                source $BASH_DIR/.bash_run
+                git --git-dir=$BASH_DIR/.git checkout $name
+                source $BASH_DIR/dotfiles/.bash_run
                 cd - > \dev\null
             ;;
             master)
-                git checkout master
-                source $BASH_DIR/.bash_run
+                git --git-dir=$BASH_DIR/.git checkout master
+                source $BASH_DIR/dotfiles/.bash_run
                 cd - > \dev\null
             ;;
             -h|--help*)
@@ -52,10 +52,10 @@ bashmaster(){
     done
     case ${ACTION} in
         get)
-            `git checkout ${BRANCH_NAME} ${FILENAME}`
+            `git --git-dir=$BASH_DIR/.git checkout ${BRANCH_NAME} ${FILENAME}`
         ;;
         patch)
-            `git checkout --patch ${BRANCH_NAME} ${FILENAME}`
+            `git --git-dir=$BASH_DIR/.git checkout --patch ${BRANCH_NAME} ${FILENAME}`
         ;;
     esac
 }
