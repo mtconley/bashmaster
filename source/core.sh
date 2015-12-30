@@ -65,5 +65,4 @@ bashmaster(){
             unalias git
         ;;
     esac
-    unalias git
 }
