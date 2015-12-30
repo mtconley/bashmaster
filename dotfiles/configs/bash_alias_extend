@@ -6,22 +6,6 @@ alias l="ls -lFG" # all files, in long format
 alias la="ls -laFG" # all files inc dotfiles, in long format
 alias lsd='ls -lFG | grep "^d"' # only directories
 
-# Color tree -- brew install tree
-alias tree="tree -C --dirsfirst"
-
-alias tidy="tidy -omit -q -indent "
-# Colored up cat!
-# You must install Pygments first - "pip install pygments"
-alias pyg='pygments' # use in place of cat
-# sudo npm install -g json
-alias json='json | pyg json'
-# you must install tidy-html5 first -- "brew install tidy-html5"
-alias html='tidy | pyg html'
-alias xml='tidy -xml | pyg html'
-# you must install csvkit first -- pip install csvkit
-alias csv='csvlook | pyg numpy'
-# you must install pygments-markdown-lexer -- pip install pygments-markdown-lexer
-alias md='pyg md'
 
 
 alias cp='cp -iv'
