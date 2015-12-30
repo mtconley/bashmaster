@@ -3,8 +3,6 @@ bashmaster(){
     b='\033[1;5;255m'
     n='\033[0;5;255m'
     alias git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
-    echo "TEST"
-    echo $git
     for i in "$@"; do
         case $i in
             get=*)
@@ -28,13 +26,11 @@ bashmaster(){
             home)
                 name=`uname -n`
                 git checkout $name
-                echo 'home'
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
             master)
                 git checkout master
-                echo 'master'
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
