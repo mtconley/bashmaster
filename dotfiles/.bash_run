@@ -10,5 +10,8 @@ load_script_dir $BASH_DIR/scripts
 # Load bash export files
 load_file_dir $BASH_DIR/configs
 
+# Ensure core bashmaster functionality is present
+load_file $BASH_DIR/../source/core.sh
+
 # Load personal .bashrc after everything else
 load_file ~/.bashrc
