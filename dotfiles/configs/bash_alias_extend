@@ -6,7 +6,8 @@ alias l="ls -lFG" # all files, in long format
 alias la="ls -laFG" # all files inc dotfiles, in long format
 alias lsd='ls -lFG | grep "^d"' # only directories
 
-
+# Color tree -- brew install tree
+alias tree="tree -C --dirsfirst"
 
 alias cp='cp -iv'
 alias df='df -Ph'
