@@ -1,5 +1,6 @@
 # Special ignore for files appended with *_ignore*
 *_ignore*
+*archive/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
