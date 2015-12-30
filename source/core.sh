@@ -27,7 +27,7 @@ bashmaster(){
                 git checkout $name
             ;;
             master)
-                git chekout master
+                git checkout master
             ;;
             -h|--help*)
                 echo -e "usage:"
