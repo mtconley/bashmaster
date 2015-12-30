@@ -29,6 +29,7 @@ bashmaster(){
             ;;
             master)
                 git checkout master
+                source $BASH_DIR/.bash_run
             ;;
             -h|--help*)
                 echo -e "usage:"
