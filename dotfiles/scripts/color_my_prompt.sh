@@ -1,9 +1,9 @@
 #!/bin/bash
 color_my_prompt ()
 {
-    local __cur_locn_c="\[\033[01;34m\]";
+    local __cur_locn_c="\[\033[38;5;124m\]";
     local __cur_locn="\w";
-    local __git_branch_c="\[\033[35m\]";
+    local __git_branch_c="\[\033[38;5;22m\]";
     local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`';
     local __prompt_tail_c="\[\033[36m\]";
     local __prompt_tail="⚙";          # or any other cool unicode symbol i.e. ><(((º> 
