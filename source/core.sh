@@ -33,6 +33,11 @@ bashmaster(){
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
+            checkout=*)
+                (cd $BASH_DIR && git checkout "${i#*=}")
+                source $BASH_DIR/dotfiles/.bash_run
+                cd - > /dev/null
+            ;;
             -h|--help*)
                 echo -e "usage:"
                 echo -e "   to$b GET$n file from branch:"
@@ -45,6 +50,8 @@ bashmaster(){
                 echo -e "       bashmaster home"
                 echo -e "   to checkout the$b MASTER$n branch"
                 echo -e "       bashmaster master"
+                echo -e "   to$b CHECKOUT$n a branch"
+                echo -e "       bashmaster checkout=<branch>"
 
                 shift
             ;;
