@@ -62,6 +62,7 @@ bashmaster(){
             (cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME})
         ;;
         patch)
+            echo '---> ENTER 'e' TO PATCH; ENTER 'n' TO EXIT <---'
             (cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME})
         ;;
     esac
