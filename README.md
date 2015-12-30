@@ -12,7 +12,7 @@ Bashmaster must be installed from the `source` directory as demonstrated above
 bashmaster checkout=branch1
 bashmaster home
 bashmaster get=dotfiles/scripts/z.sh from=master
-bashmaster patch=dotfiles/configs/bash_alias_extend from=branch3
+bashmaster patch=dotfiles/configs/bash_alias_extend from=branch1
 bashmaster list
 ```
 
