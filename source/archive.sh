@@ -1,7 +1,7 @@
 #!/bin/bash
 archive_profile(){
     now=`date +"%Y%m%d"`
-    cp ~/.bash_profile $"../archive/bash_profile_$now"
+    cp ~/.bash_profile "$BASH_DIR/archive/bash_profile_$now"
 }
 
 last(){
