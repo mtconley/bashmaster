@@ -10,7 +10,7 @@ install_new_profile(){
 
 make_new_branch(){
     name=`uname -n`
-    git checkout -b $name
+    (cd $BASH_DIR && git checkout -b $name)
 }
 
 make_new_branch
