@@ -13,5 +13,8 @@ load_file_dir $BASH_DIR/dotfiles/configs
 # Ensure core bashmaster functionality is present
 load_file $BASH_DIR/source/core.sh
 
+# instantiate users home branch
+git checkout `uname -n`
+
 # Load personal .bashrc after everything else
 load_file ~/.bashrc
