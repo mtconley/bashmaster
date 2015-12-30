@@ -2,6 +2,7 @@ bashmaster(){
     ACTION="NONE"
     b='\033[1;5;255m'
     n='\033[0;5;255m'
+    local git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
     for i in "$@"; do
         case $i in
             get=*)
@@ -24,12 +25,12 @@ bashmaster(){
             ;;
             home)
                 name=`uname -n`
-                git --git-dir=$BASH_DIR/.git checkout $name
+                git checkout $name
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > \dev\null
             ;;
             master)
-                git --git-dir=$BASH_DIR/.git checkout master
+                git checkout master
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > \dev\null
             ;;
@@ -52,10 +53,10 @@ bashmaster(){
     done
     case ${ACTION} in
         get)
-            `git --git-dir=$BASH_DIR/.git checkout ${BRANCH_NAME} ${FILENAME}`
+            `git checkout ${BRANCH_NAME} ${FILENAME}`
         ;;
         patch)
-            `git --git-dir=$BASH_DIR/.git checkout --patch ${BRANCH_NAME} ${FILENAME}`
+            `git checkout --patch ${BRANCH_NAME} ${FILENAME}`
         ;;
     esac
 }
