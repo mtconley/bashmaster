@@ -30,17 +30,17 @@ bashmaster(){
                 git chekout master
             ;;
             -h|--help*)
-                echo -e 'usage:'
-                echo -e '   to GET file from branch:'
-                echo -e '       bashmaster get=<filename> from=<branch>'
-                echo -e '   to PATCH file from branch'
-                echo -e '       bashmaster patch=<filename> from=<branch>'
-                echo -e '   to LIST available branches'
-                echo -e '       bashmaster list'
-                echo -e '   to checkout HOME branch'
-                echo -e '       bashmaster home'
-                echo -e '   to checkout MASTER branch'
-                echo -e '       bashmaster master'
+                echo -e "usage:"
+                echo -e "   to$b GET$n file from branch:"
+                echo -e "       bashmaster get=<filename> from=<branch>"
+                echo -e "   to$b PATCH$n file from branch"
+                echo -e "       bashmaster patch=<filename> from=<branch>"
+                echo -e "   to$b LIST$n available branches"
+                echo -e "       bashmaster list"
+                echo -e "   to checkout$b HOME$n branch"
+                echo -e "       bashmaster home"
+                echo -e "   to checkout$b MASTER$n branch"
+                echo -e "       bashmaster master"
 
                 shift
             ;;
