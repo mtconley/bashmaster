@@ -1,0 +1,2 @@
+export BASH_DIR=/Users/mconley/Documents/root/repos/bashmaster
+. $BASH_DIR/.bash_run

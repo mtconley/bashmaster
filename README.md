@@ -10,3 +10,6 @@
 * `git checkout --patch master $FILE` (update existing file (bashmaster))
     * Stage this hunk [y,n,a,d,/,j,J,g,e,?]? ?
     * select e - manually edit the current hunk
+* set `branch.my_branch.merge` in configuration file
+* [sybolic refs](https://git-scm.com/docs/git-symbolic-ref)
+* [upstream branches](http://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
