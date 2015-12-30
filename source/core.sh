@@ -25,7 +25,6 @@ bashmaster(){
             ;;
             home)
                 name=`uname -n`
-                echo $git
                 git checkout $name
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
