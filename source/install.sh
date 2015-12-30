@@ -14,5 +14,8 @@ make_new_branch(){
 }
 
 make_new_branch
+echo "1"
 bash $BASH_DIR/source/archive.sh
+echo "2"
 install_new_profile
+echo "3"
