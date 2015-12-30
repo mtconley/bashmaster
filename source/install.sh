@@ -5,6 +5,7 @@ install_new_profile(){
     line2=". \$BASH_DIR/dotfiles/.bash_run"
     echo $line1 > ~/.bash_profile
     echo $line2 >> ~/.bash_profile
+    . ~/.bash_profile
 }
 
 make_new_branch(){
@@ -12,5 +13,6 @@ make_new_branch(){
     git checkout -b $name
 }
 
+make_new_branch
 bash $BASH_DIR/source/archive.sh
 install_new_profile
