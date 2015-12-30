@@ -3,6 +3,8 @@ bashmaster(){
     b='\033[1;5;255m'
     n='\033[0;5;255m'
     alias git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
+    echo "TEST"
+    echo $git
     for i in "$@"; do
         case $i in
             get=*)
