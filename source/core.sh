@@ -26,6 +26,9 @@ bashmaster(){
                 name=`uname -n`
                 git checkout $name
             ;;
+            master)
+                git chekout master
+            ;;
             -h|--help*)
                 echo -e 'usage:'
                 echo -e '   to GET file from branch:'
@@ -36,6 +39,8 @@ bashmaster(){
                 echo -e '       bashmaster list'
                 echo -e '   to checkout HOME branch'
                 echo -e '       bashmaster home'
+                echo -e '   to checkout MASTER branch'
+                echo -e '       bashmaster master'
 
                 shift
             ;;
