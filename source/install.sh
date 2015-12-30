@@ -2,7 +2,7 @@
 BASH_DIR=${PWD%/*}
 install_new_profile(){
     line1="export BASH_DIR=$BASH_DIR/dotfiles"
-    line2=". \$BASH_DIR/.bash_run"
+    line2=". \$BASH_DIR/dotfiles/.bash_run"
     echo $line1 > ~/.bash_profile
     echo $line2 >> ~/.bash_profile
 }
