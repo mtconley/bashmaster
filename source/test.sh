@@ -1,1 +1,1 @@
-echo "THIS is a test"
+echo 'test'
