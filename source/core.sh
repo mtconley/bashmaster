@@ -53,10 +53,14 @@ bashmaster(){
     done
     case ${ACTION} in
         get)
+            alias git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
             git checkout ${BRANCH_NAME} ${FILENAME}
+            unalias git
         ;;
         patch)
+            alias git=`git --git-dir=$BASH_DIR/.git --work-tree=$BASH_DIR`
             git checkout --patch ${BRANCH_NAME} ${FILENAME}
+            unalias git
         ;;
     esac
     unalias git
