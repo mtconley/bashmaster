@@ -26,11 +26,13 @@ bashmaster(){
             home)
                 name=`uname -n`
                 git checkout $name
+                echo 'home'
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
             master)
                 git checkout master
+                echo 'master'
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
@@ -53,10 +55,10 @@ bashmaster(){
     done
     case ${ACTION} in
         get)
-            `git checkout ${BRANCH_NAME} ${FILENAME}`
+            git checkout ${BRANCH_NAME} ${FILENAME}
         ;;
         patch)
-            `git checkout --patch ${BRANCH_NAME} ${FILENAME}`
+            git checkout --patch ${BRANCH_NAME} ${FILENAME}
         ;;
     esac
     unalias git
