@@ -27,12 +27,12 @@ bashmaster(){
                 name=`uname -n`
                 git checkout $name
                 source $BASH_DIR/dotfiles/.bash_run
-                cd - > \dev\null
+                cd - > /dev/null
             ;;
             master)
                 git checkout master
                 source $BASH_DIR/dotfiles/.bash_run
-                cd - > \dev\null
+                cd - > /dev/null
             ;;
             -h|--help*)
                 echo -e "usage:"
