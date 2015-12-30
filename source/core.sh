@@ -7,7 +7,7 @@ bashmaster(){
             shift # past argument=value
             ;;
             patch*)
-            FILENAME="${#*=}"
+            FILENAME="${i#*=}"
             ACTION="patch"
             shift
             ;;
