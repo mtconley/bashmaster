@@ -26,10 +26,12 @@ bashmaster(){
                 name=`uname -n`
                 git checkout $name
                 source $BASH_DIR/.bash_run
+                cd -
             ;;
             master)
                 git checkout master
                 source $BASH_DIR/.bash_run
+                cd -
             ;;
             -h|--help*)
                 echo -e "usage:"
