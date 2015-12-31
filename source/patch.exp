@@ -1,7 +1,0 @@
-#!/usr/bin/expect -f
-set branchname [lindex $argv 0];
-set file [lindex $argv 1];
-spawn git checkout --patch $branchname $file\r
-expect "Apply this hunk to index and worktree \[y,n,q,a,d,/,s,e,?\]?"
-send "e\r"
-interact
