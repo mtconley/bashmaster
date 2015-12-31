@@ -1,4 +1,7 @@
-#Installation
+#Bashmaster
+Working on small teams, many scripts and shortcuts start to crop up to engage common systems and problems.  `bashmaster` is a way to manage all of these tools and share them among peers without losing control of your own system configuration.  It is written entirely in bash for bash 3.2 but will start to move toward bash 4 compatibility.
+
+##Installation
 ```
 git clone https://github.com/mtconley/bashmaster.git
 cd bashmaster/source
@@ -19,6 +22,14 @@ bashmaster --help
 ```
 ##Other Features
 Any file ending in "_ignore" will be igonred.  This means a file placed in the `configs` directory titled `bash_export_ignore`, can be used to store api keys without exposing yourself.
+```
+    configs
+    ├── bash_alias
+    ├── bash_alias_extend
+    ├── bash_export
+    ├── bash_export_ignore
+    └── bash_profile
+```
 
 ###TODO
 * Clean up argument parsing
