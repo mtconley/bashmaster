@@ -11,6 +11,9 @@ install_new_profile(){
 make_new_branch(){
     name=`uname -n`
     (cd $BASH_DIR && git checkout -b $name)
+    (cd $BASH_DIR && git add .)
+    (cd $BASH_DIR && git commit -m "build $name branch")
+    (cd $BASH_DIR && git push origin $name)
 }
 
 make_new_branch
