@@ -1,20 +1,6 @@
+# bash_export -- define environmental variables
 #Defaul PATH
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications"
-
-# go to home/root
-export root=~/Documents/root
-
-#color text streamers
-export LESS='-R'
-export LESSOPEN='|pygmentize -O style=monokai -f console256 -g %s'
-
-export MORE='-R'
-export MOREOPEN='|pygmentize -O style=monokai -f console256 -g %s'
-
-export EDITOR=vim
-export LS_COLORS='di=1;36'
-# show wd in tab
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 #Point to anaconda
 export PATH="/Users/$USER/anaconda/bin:$PATH"
@@ -22,15 +8,14 @@ export PATH="/Users/$USER/anaconda/bin:$PATH"
 #Point to personal scripts
 export PATH="/Users/$USER/Documents/root/docs/scripts:$PATH"
 
-#Point to Arduino
-export PATH="/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin:$PATH"
-export PATH="/Applications/Arduino.app/Contents/Java/hardware/tools/avr/etc:$PATH"
-
-#Point to JAVA
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-
 # added by Miniconda 3.10.1 installer
 export PATH="/Users/$USER/miniconda/bin:$PATH"
 
-export width=`tput cols`
-export height=`tput lines`
+# go to home/root
+export root=~/Documents/root
+
+# show wd in tab
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+#Point to JAVA
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
