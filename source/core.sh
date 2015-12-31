@@ -38,19 +38,24 @@ bashmaster(){
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
             ;;
+            current)
+                (cd $BASH_DIR && git branch | grep -e ^\*)
+            ;;
             -h|--help*)
-                echo -e "usage:"
-                echo -e "   to$b GET$n file from branch:"
+                echo -e "usage: bashmaster"
+                echo -e "   GET - to$b GET$n file from branch:"
                 echo -e "       bashmaster get=<filename> from=<branch>"
-                echo -e "   to$b PATCH$n file from branch"
+                echo -e "   PATCH - to$b PATCH$n file from branch"
                 echo -e "       bashmaster patch=<filename> from=<branch>"
-                echo -e "   to$b LIST$n available branches"
+                echo -e "   LIST - to$b LIST$n available branches"
                 echo -e "       bashmaster list"
-                echo -e "   to checkout your$b HOME$n branch"
+                echo -e "   CURRENT - to display$b CURRENT$n branch"
+                echo -e "       bashmaster current"
+                echo -e "   HOME - to checkout your$b HOME$n branch"
                 echo -e "       bashmaster home"
-                echo -e "   to checkout the$b MASTER$n branch"
+                echo -e "   MASTER - to checkout the$b MASTER$n branch"
                 echo -e "       bashmaster master"
-                echo -e "   to$b CHECKOUT$n a branch"
+                echo -e "   CHECKOUT - to$b CHECKOUT$n a branch"
                 echo -e "       bashmaster checkout=<branch>"
 
                 shift
