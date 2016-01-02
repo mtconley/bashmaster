@@ -47,7 +47,9 @@ bashmaster(){
             ;;
             unset)
                 for i in `funcs`; do
-                    unset -f $i
+                    if [[ "$i" != "bashmaster" ]]; then
+                        unset -f $i
+                    fi
                 done
                 shift
             ;;
