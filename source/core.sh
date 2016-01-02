@@ -27,19 +27,23 @@ bashmaster(){
                 (cd $BASH_DIR && git checkout $name)
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
+                shift
             ;;
             master)
                 (cd $BASH_DIR && git checkout master)
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
+                shift
             ;;
             checkout=*)
                 (cd $BASH_DIR && git checkout "${i#*=}")
                 source $BASH_DIR/dotfiles/.bash_run
                 cd - > /dev/null
+                shift
             ;;
             current)
                 (cd $BASH_DIR && git branch | grep -e ^\*)
+                shift
             ;;
             -h|--help*)
                 echo -e "usage: bashmaster"
