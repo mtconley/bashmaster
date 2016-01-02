@@ -45,6 +45,11 @@ bashmaster(){
                 (cd $BASH_DIR && git branch | grep -e ^\*)
                 shift
             ;;
+            unset)
+                for i in `funcs`; do
+                    unset -f $i
+                shift
+            ;;
             -h|--help*)
                 echo -e "usage: bashmaster"
                 echo -e "   GET - to$b GET$n file from branch:"
