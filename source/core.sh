@@ -48,9 +48,10 @@ bashmaster(){
             unset)
                 for i in `funcs`; do
                     unset -f $i
+                done
                 shift
             ;;
-            -h|--help*)
+            -h|--help)
                 echo -e "usage: bashmaster"
                 echo -e "   GET - to$b GET$n file from branch:"
                 echo -e "       bashmaster get=<filename> from=<branch>"
