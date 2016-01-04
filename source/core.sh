@@ -5,14 +5,14 @@ bashmaster(){
     for i in "$@"; do
         case $i in
             get=*)
-                FILE=${i#=}
-                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS`
+                FILE="${i#*=}"
                 ACTION="get"
+                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS` || echo false
                 shift # past argument=value
             ;;
             patch=*)
-                FILE=${i#=}
-                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS`
+                FILE="${i#*=}"
+                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS` || echo false
                 ACTION="patch"
                 shift
             ;;
@@ -20,7 +20,7 @@ bashmaster(){
                 BRANCH_NAME="${i#*=}"
                 shift
             ;;
-            list)
+            list | ls)
                 ( cd $BASH_DIR && git branch | grep -v master )
                 shift
             ;;
@@ -81,16 +81,25 @@ bashmaster(){
     done
     case ${ACTION} in
         get)
-            now=`date +%Y-%m-%d-%H:%M`
-            ( cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME} )
-            ( cd $BASH_DIR && git add ${FILENAME} )
-            ( cd $BASH_DIR && git commit -m "$now: add file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
+            if [ "${FILENAME}" != false ]; then
+                now=`date +%Y-%m-%d-%H:%M`
+                ( cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME} && echo "${FILENAME} successfully added")
+                ( cd $BASH_DIR && git add ${FILENAME} ) 1> /dev/null
+                ( cd $BASH_DIR && git commit -m "$now: add file, ${FILENAME}, from branch, ${BRANCH_NAME}" ) 1> /dev/null
+            else
+                echo "That filename does not exist"
+            fi
         ;;
         patch)
-            echo '---> ENTER 'e' TO PATCH; ENTER 'n' TO EXIT <---'
-            ( cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME} )
-            ( cd $BASH_DIR && git add ${FILENAME} )
-            ( cd $BASH_DIR && git commit -m "$now: patch file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
+            if [ "${FILENAME}" != false ]; then
+                now=`date +%Y-%m-%d-%H:%M`
+                echo '---> ENTER 'e' TO PATCH; ENTER 'n' TO EXIT <---'
+                ( cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME} )
+                ( cd $BASH_DIR && git add ${FILENAME} )
+                ( cd $BASH_DIR && git commit -m "$now: patch file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
+            else
+                echo "That filename does not exist"
+            fi
         ;;
     esac
 }
@@ -112,7 +121,6 @@ get_filepath(){
         file_in_dir $FILE $DIR && echo $DIR/$FILE && FLAG=1
     done
     if [ $FLAG -eq 0 ]; then
-        error "ERROR: File, $FILE, cannot be found"
         return 1
     else
         return 0
