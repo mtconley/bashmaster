@@ -1,0 +1,16 @@
+#!/bin/bash
+# Users can only commit to their nodename branch
+NAME=`uname -n`
+bn(){ echo -n $BRANCH_NAME; }
+
+BRANCH_NAME=`git branch | grep -e ^* | tr '*' '\r' | tr ' ' '\r' | hexdump`
+BRANCH_NAME=`bn | sed 's/0000000//' | sed 's/000000d//' | sed 's/0d 0d//'`
+BRANCH_NAME=`bn | tr -s ' ' | xxd -r -p`
+
+if [[ "$BRANCH_NAME" == "$NAME" ]]; then
+    exit 0
+else
+    echo "You are not authorized to commit to this branch"
+    echo "You are authorized to commit to $NAME"
+    exit 1
+fi
