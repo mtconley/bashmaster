@@ -20,3 +20,5 @@ bashmaster list
 * Clean up argument parsing
     * how options are accessed
     * how files are found
+* Revert 1 step
+* update master source only (merge?)
