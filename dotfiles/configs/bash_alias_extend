@@ -1,7 +1,7 @@
 ### Aliases - extended functionality of existing commands
 
 # Color LS
-alias ls="gls --color=auto --group-directories-first" #brew install coreutils
+#alias ls="gls --color=auto --group-directories-first" #brew install coreutils
 alias l="ls -lFG" # all files, in long format
 alias la="ls -laFG" # all files inc dotfiles, in long format
 alias lsd='ls -lFG | grep "^d"' # only directories
