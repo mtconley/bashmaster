@@ -16,6 +16,12 @@ make_new_branch(){
     (cd $BASH_DIR && git push origin $name)
 }
 
+add_pre_commit_hook(){
+    PRE_COMMIT=$BASH_DIR/.git/hooks/pre-commit 
+    cat ./pre-commit >> $PRE_COMMIT
+}
+
 make_new_branch
 bash $BASH_DIR/source/archive.sh
 install_new_profile
+add_pre_commit_hook
