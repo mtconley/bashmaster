@@ -67,8 +67,8 @@ bashmaster(){
                 shift
             ;;
             *)
-                echo -e "\033[0;5;31mERROR: An error has occured, please try again."
-                echo -e "       type 'bashmaster --help' for more hints"
+                error  "ERROR: An error has occured, please try again."
+                error  "       type 'bashmaster --help' for more hints"
          esac
     done
     case ${ACTION} in
@@ -109,5 +109,5 @@ get_filepath(){
     fi
 }
 
-bold(){ echo -e "\033[1;5;255m$@\033[0m"; }
-error() { echo -e "\033[0;5;31m$@\033[0m"; }
+bold(){ echo -e "\033[1;255m$@\033[0m"; }
+error() { echo -e "\033[0;31m$@\033[0m"; }
