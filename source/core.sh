@@ -1,16 +1,18 @@
 bashmaster(){
     ACTION="NONE"
-    b='\033[1;5;255m'
-    n='\033[0;5;255m'
+    SCRIPTS="$BASH_DIR/dotfiles/scripts"
+    CONFIGS="$BASH_DIR/dotfiles/configs"
     for i in "$@"; do
         case $i in
             get=*)
-                FILENAME="$BASH_DIR/dotfiles/scripts/${i#*=}"
+                FILE=${i#=}
+                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS`
                 ACTION="get"
                 shift # past argument=value
             ;;
             patch=*)
-                FILENAME="$BASH_DIR/dotfiles/scripts/${i#*=}"
+                FILE=${i#=}
+                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS`
                 ACTION="patch"
                 shift
             ;;
@@ -47,25 +49,26 @@ bashmaster(){
             ;;
             -h|--help)
                 echo -e "usage: bashmaster"
-                echo -e "   GET - to$b GET$n file from branch:"
+                echo -e "   GET - to `bold GET` file from branch:"
                 echo -e "       bashmaster get=<filename> from=<branch>"
-                echo -e "   PATCH - to$b PATCH$n file from branch"
+                echo -e "   PATCH - to `bold PATCH` file from branch"
                 echo -e "       bashmaster patch=<filename> from=<branch>"
-                echo -e "   LIST - to$b LIST$n available branches"
+                echo -e "   LIST - to `bold LIST` available branches"
                 echo -e "       bashmaster list"
-                echo -e "   CURRENT - to display$b CURRENT$n branch"
+                echo -e "   CURRENT - to display `bold CURRENT` branch"
                 echo -e "       bashmaster current"
-                echo -e "   HOME - to checkout your$b HOME$n branch"
+                echo -e "   HOME - to checkout your `bold HOME` branch"
                 echo -e "       bashmaster home"
-                echo -e "   MASTER - to checkout the$b MASTER$n branch"
+                echo -e "   MASTER - to checkout the `bold MASTER` branch"
                 echo -e "       bashmaster master"
-                echo -e "   CHECKOUT - to$b CHECKOUT$n a branch"
+                echo -e "   CHECKOUT - to `bold CHECKOUT` a branch"
                 echo -e "       bashmaster checkout=<branch>"
 
                 shift
             ;;
             *)
-                echo -e "\033[0;5;31mERROR: An error has occured, please try again.\nSee bashmaster --help for more hints"
+                echo -e "\033[0;5;31mERROR: An error has occured, please try again."
+                echo -e "       type 'bashmaster --help' for more hints"
          esac
     done
     case ${ACTION} in
@@ -81,3 +84,30 @@ bashmaster(){
         ;;
     esac
 }
+
+file_in_dir(){
+    FILE=$1
+    DIR=$2
+    if [[ -f "$2/$1" ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+get_filepath(){
+    FILE=$1
+    FLAG=0
+    for DIR in "${@:2}"; do
+        file_in_dir $FILE $DIR && echo $DIR/$FILE && FLAG=1
+    done
+    if [ $FLAG -eq 0 ]; then
+        error "ERROR: File, $FILE, cannot be found"
+        return 1
+    else
+        return 0
+    fi
+}
+
+bold(){ echo -e "\033[1;5;255m$@\033[0m"; }
+error() { echo -e "\033[0;5;31m$@\033[0m"; }
