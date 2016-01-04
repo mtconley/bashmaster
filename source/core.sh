@@ -5,12 +5,12 @@ bashmaster(){
     for i in "$@"; do
         case $i in
             get=*)
-                FILENAME="${i#*=}"
+                FILENAME="$BASH_DIR/dotfiles/scripts/${i#*=}"
                 ACTION="get"
                 shift # past argument=value
             ;;
             patch=*)
-                FILENAME="${i#*=}"
+                FILENAME="$BASH_DIR/dotfiles/scripts/${i#*=}"
                 ACTION="patch"
                 shift
             ;;
