@@ -21,7 +21,7 @@ bashmaster(){
                 shift
             ;;
             list)
-                ( cd $BASH_DIR && git branch )
+                ( cd $BASH_DIR && git branch | grep -v master )
                 shift
             ;;
             home)
