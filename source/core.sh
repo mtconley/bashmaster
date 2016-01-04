@@ -6,13 +6,13 @@ bashmaster(){
         case $i in
             get=*)
                 FILE="${i#*=}"
+                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS || echo false`
                 ACTION="get"
-                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS` || echo false
                 shift # past argument=value
             ;;
             patch=*)
                 FILE="${i#*=}"
-                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS` || echo false
+                FILENAME=`get_filepath $FILE $SCRIPTS $CONFIGS || echo false`
                 ACTION="patch"
                 shift
             ;;
@@ -81,24 +81,24 @@ bashmaster(){
     done
     case ${ACTION} in
         get)
-            if [ "${FILENAME}" != false ]; then
+            if [ "${FILENAME}" != "false" ]; then
                 now=`date +%Y-%m-%d-%H:%M`
-                ( cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME} && echo "${FILENAME} successfully added")
+                ( cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME} && echo "$FILE added successfully")
                 ( cd $BASH_DIR && git add ${FILENAME} ) 1> /dev/null
                 ( cd $BASH_DIR && git commit -m "$now: add file, ${FILENAME}, from branch, ${BRANCH_NAME}" ) 1> /dev/null
             else
-                echo "That filename does not exist"
+                error "The filename, $FILE, does not exist"
             fi
         ;;
         patch)
-            if [ "${FILENAME}" != false ]; then
+            if [ "${FILENAME}" != "false" ]; then
                 now=`date +%Y-%m-%d-%H:%M`
                 echo '---> ENTER 'e' TO PATCH; ENTER 'n' TO EXIT <---'
                 ( cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME} )
                 ( cd $BASH_DIR && git add ${FILENAME} )
                 ( cd $BASH_DIR && git commit -m "$now: patch file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
             else
-                echo "That filename does not exist"
+                error "The filename, $FILE, does not exist"
             fi
         ;;
     esac
