@@ -21,48 +21,56 @@ bashmaster(){
                 shift
             ;;
             list)
-                (cd $BASH_DIR && git branch)
+                ( cd $BASH_DIR && git branch )
                 shift
             ;;
             home)
                 name=`uname -n`
-                (cd $BASH_DIR && git checkout $name)
-                source $BASH_DIR/dotfiles/.bash_run
-                cd - > /dev/null
+                ( cd $BASH_DIR && git checkout $name )
+                resource
                 shift
             ;;
             master)
-                (cd $BASH_DIR && git checkout master)
-                source $BASH_DIR/dotfiles/.bash_run
-                cd - > /dev/null
+                ( cd $BASH_DIR && git checkout master )
+                resource
                 shift
             ;;
             checkout=*)
-                (cd $BASH_DIR && git checkout "${i#*=}")
-                source $BASH_DIR/dotfiles/.bash_run
-                cd - > /dev/null
-                shift
+                ( cd $BASH_DIR && git checkout "${i#*=}" )
+                resource
             ;;
             current)
-                (cd $BASH_DIR && git branch | grep -e ^\*)
+                ( cd $BASH_DIR && git branch | grep -e ^\* )
                 shift
+            ;;
+            update)
+                name=`uname -n`
+                now=`date +%Y-%m-%d-%H:%M`
+                ( cd $BASH_DIR && git checkout master )
+                ( cd $BASH_DIR && git pull origin master )
+                ( cd $BASH_DIR && git checkout $name )
+                ( cd $BASH_DIR && git checkout master ./source/core.sh )
+                ( cd $BASH_DIR && git add ./source/core.sh )
+                ( cd $BASH_DIR && git commit -m "$now: update core.sh from master" )
             ;;
             -h|--help)
                 echo -e "usage: bashmaster"
                 echo -e "   GET - to `bold GET` file from branch:"
                 echo -e "       bashmaster get=<filename> from=<branch>"
-                echo -e "   PATCH - to `bold PATCH` file from branch"
+                echo -e "   PATCH - to `bold PATCH` file from branch:"
                 echo -e "       bashmaster patch=<filename> from=<branch>"
-                echo -e "   LIST - to `bold LIST` available branches"
+                echo -e "   LIST - to `bold LIST` available branches:"
                 echo -e "       bashmaster list"
-                echo -e "   CURRENT - to display `bold CURRENT` branch"
+                echo -e "   CURRENT - to display `bold CURRENT` branch:"
                 echo -e "       bashmaster current"
-                echo -e "   HOME - to checkout your `bold HOME` branch"
+                echo -e "   HOME - to checkout your `bold HOME` branch:"
                 echo -e "       bashmaster home"
-                echo -e "   MASTER - to checkout the `bold MASTER` branch"
+                echo -e "   MASTER - to checkout the `bold MASTER` branch:"
                 echo -e "       bashmaster master"
-                echo -e "   CHECKOUT - to `bold CHECKOUT` a branch"
+                echo -e "   CHECKOUT - to `bold CHECKOUT` a branch:"
                 echo -e "       bashmaster checkout=<branch>"
+                echo -e "   UPDATE - to `bold UPDATE` core functionality"
+                echo -e "       bashmaster update"
 
                 shift
             ;;
@@ -74,13 +82,15 @@ bashmaster(){
     case ${ACTION} in
         get)
             now=`date +%Y-%m-%d-%H:%M`
-            (cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME})
-
+            ( cd $BASH_DIR && git checkout ${BRANCH_NAME} ${FILENAME} )
+            ( cd $BASH_DIR && git add ${FILENAME} )
+            ( cd $BASH_DIR && git commit -m "$now: add file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
         ;;
         patch)
             echo '---> ENTER 'e' TO PATCH; ENTER 'n' TO EXIT <---'
-            (cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME})
-
+            ( cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME} )
+            ( cd $BASH_DIR && git add ${FILENAME} )
+            ( cd $BASH_DIR && git commit -m "$now: patch file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
         ;;
     esac
 }
@@ -108,6 +118,12 @@ get_filepath(){
         return 0
     fi
 }
+
+resource(){
+    source $BASH_DIR/dotfiles/.bash_run
+    cd - > /dev/null
+}
+
 
 bold(){ echo -e "\033[1;255m$@\033[0m"; }
 error() { echo -e "\033[0;31m$@\033[0m"; }
