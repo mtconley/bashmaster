@@ -64,6 +64,8 @@ bashmaster(){
 
                 shift
             ;;
+            *)
+                echo -e "\033[0;5;31mERROR: An error has occured, please try again.\nSee bashmaster --help for more hints"
          esac
     done
     case ${ACTION} in
