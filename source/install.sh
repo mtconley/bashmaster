@@ -1,5 +1,5 @@
 #!/bin/bash
-BASH_DIR=${PWD%/*}
+export BASH_DIR=${PWD%/*}
 install_new_profile(){
     line1="export BASH_DIR=$BASH_DIR"
     line2=". \$BASH_DIR/dotfiles/.bash_run"
