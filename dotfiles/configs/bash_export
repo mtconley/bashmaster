@@ -35,5 +35,8 @@ export PATH="/Users/$USER/miniconda/bin:$PATH"
 # add domino support
 export PATH="/Applications/domino:$PATH"
 
+# add optionals
+export PATH="/opt/local/bin:$PATH"
+
 export width=`tput cols`
 export height=`tput lines`
