@@ -32,5 +32,8 @@ export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 # added by Miniconda 3.10.1 installer
 export PATH="/Users/$USER/miniconda/bin:$PATH"
 
+# add domino support
+export PATH="/Applications/domino:$PATH"
+
 export width=`tput cols`
 export height=`tput lines`
