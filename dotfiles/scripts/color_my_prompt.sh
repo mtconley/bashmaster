@@ -16,7 +16,7 @@ color_my_prompt() {
     # __git_branch must have command wrapped in single quotes to update on checkout...
     local __git_branch_color="\[\033[1;96m\]"
     local __git_branch_text='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-    local __git_branch=$__cur_branch_color$__cur_branch_text
+    local __git_branch=$__git_branch_color$__git_branch_text
 
     local __prompt_tail_color="\[\033[38;5;123m\]"
     local __prompt_tail_text="\\$:" # prompt color and symbol
