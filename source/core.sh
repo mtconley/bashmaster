@@ -101,6 +101,8 @@ bashmaster(){
                 error "The filename, $FILE, does not exist"
             fi
         ;;
+        append)
+            export PATH="$2:$PATH"
     esac
 }
 
