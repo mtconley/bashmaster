@@ -19,7 +19,7 @@ function pygments(){
         has_lexer=`echo "$1" | grep -Eq $pattern && echo true || echo false`
         
         if [ $has_lexer == "true" ]; then
-            command pygmentize -l $1 -O style="monokai" -f console256 -g
+            command pygmentize -l $1 -O style="monokai" -f console256 -g ${@:2}
         
         else
             command pygmentize -O style="monokai" -f console256 -g $@
