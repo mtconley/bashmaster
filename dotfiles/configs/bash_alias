@@ -26,18 +26,29 @@ alias gc='git commit -m' # requires you to type a commit message
 alias gp='git push'
 alias grm='git rm $(git ls-files --deleted)'
 
+# cat support
+alias pyg='pygments'
+alias xml='pygments xml'
+# html support through function
+alias csv='csvlook | pygments numpy'
+alias json='json | pygments json'
+alias markdown='pygments md'
+alias md='markdown'
+
+
+
 #show hide files
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 
 # common programs
-alias bettertouchtool="open -a /Applications/BetterTouchTool.app/Contents/MacOS/BetterTouchTool"
-alias outlook="open -a /Applications/Microsoft\ Office\ 2011/Microsoft\ Outlook.app/Contents/MacOS/Microsoft\ Outlook"
-alias slack="open -a /Applications/Slack.app/Contents/MacOS/Slack"
-alias chrome="open -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias iterm="open -a /Applications/iTerm.app/Contents/MacOs/iTerm"
-alias xcode="open -a /Applications/Xcode.app/Contents/MacOS/Xcode"
+alias bettertouchtool="/Applications/BetterTouchTool.app/Contents/MacOS/BetterTouchTool"
+alias outlook="/Applications/Microsoft\ Office\ 2011/Microsoft\ Outlook.app/Contents/MacOS/Microsoft\ Outlook"
+alias slack="/Applications/Slack.app/Contents/MacOS/Slack"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias iterm="/Applications/iTerm.app/Contents/MacOs/iTerm"
+alias xcode="/Applications/Xcode.app/Contents/MacOS/Xcode"
 
 # personal tools
 alias root='cd $root'
