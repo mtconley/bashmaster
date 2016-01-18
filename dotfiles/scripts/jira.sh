@@ -40,6 +40,25 @@ jira () {
         new)
             jira-new $2 $3 $4
         ;;
+        -h|--help)
+            HELP_TEXT="usage: jira new [TITLE] {PRIORITY} {ASSIGNEE_USERNAME} 
+options:
+    TITLE                str: Title of the jira ticket     
+    PRIORITY             optional, int: [1-5] 
+        default: 5
+        1   P1-Critical
+        2   P2-High
+        3   P3-Medium
+        4   P4-Low
+        5   P5-Undetermined
+    ASSIGNEE_USERNANME  optional, str: Jira Username to assign ticket
+        default: current users username
+enter jira -hh or jira --hhelp for more options"
+        echo -e "$HELP_TEXT"
+        ;;
+        -hh|--hhelp)
+            jira-cli -h
+        ;;
         *)
             jira-cli $@ -v
         ;;
