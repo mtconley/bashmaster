@@ -53,7 +53,6 @@ bashmaster(){
                 ( cd $BASH_DIR && git checkout master ./source/core.sh )
                 ( cd $BASH_DIR && git add ./source/core.sh )
                 ( cd $BASH_DIR && git commit -m "$now: update core.sh from master" )
-                ( cd $BASH_DIR && git push origin master )
             ;;
             -h|--help)
                 echo -e "usage: bashmaster"
