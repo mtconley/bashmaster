@@ -33,7 +33,6 @@ export PATH="/opt/local/bin:$PATH"
 
 export width=`tput cols`
 export height=`tput lines`
-=======
+
 # Optionals
 export PATH="/opt/local/bin:$PATH"
->>>>>>> 250621149edd6ee8cb4e1fff0135727514102f87
