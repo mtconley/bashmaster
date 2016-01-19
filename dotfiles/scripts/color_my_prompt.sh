@@ -1,5 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
 color_my_prompt() {
     #local __user_and_host="\[\033[01;32m\]\u@\h"
 
