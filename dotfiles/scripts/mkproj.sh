@@ -1,3 +1,3 @@
 mkproj() {
-    command python ~/Documents/root/projects/.mkdir.py $@
+    command python $BASH_DIR/dotfiles/scripts/mkproj.py $@
 }
