@@ -20,7 +20,6 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 #Point to JAVA
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-<<<<<<< HEAD
 # added by Miniconda 3.10.1 installer
 export PATH="/Users/$USER/miniconda/bin:$PATH"
 
