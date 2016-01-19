@@ -1,9 +1,13 @@
 #!/bin/bash
 # Users can only commit to their nodename branch
 NAME=`uname -n`
+<<<<<<< HEAD
 bn(){ 
     echo -n $BRANCH_NAME 
 }
+=======
+bn(){ echo -n $BRANCH_NAME; }
+>>>>>>> 250621149edd6ee8cb4e1fff0135727514102f87
 
 BRANCH_NAME=`git branch | grep -e ^* | tr '*' '\r' | tr ' ' '\r' | hexdump`
 BRANCH_NAME=`bn | sed 's/0000000//' | sed 's/000000d//' | sed 's/0d 0d//'`

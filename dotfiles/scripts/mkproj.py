@@ -90,5 +90,6 @@ if __name__=='__main__':
                  'results': {'data': None, 
                              'figures': None, 
                              'model': None,
+                             'notes': None,
                              'html': None}}
     make_project(name, date, dir_dict=dir_dict)

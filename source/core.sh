@@ -95,12 +95,14 @@ bashmaster(){
                 now=`date +%Y-%m-%d-%H:%M`
                 echo '---> ENTER 'e' TO PATCH; ENTER 'n' TO EXIT <---'
                 ( cd $BASH_DIR && git checkout --patch ${BRANCH_NAME} ${FILENAME} )
-                ( cd $BASH_DIR && git add ${FILENAME} )
-                ( cd $BASH_DIR && git commit -m "$now: patch file, ${FILENAME}, from branch, ${BRANCH_NAME}" )
+                ( cd $BASH_DIR && git add ${FILENAME} ) 1> /dev/null
+                ( cd $BASH_DIR && git commit -m "$now: patch file, ${FILENAME}, from branch, ${BRANCH_NAME}" ) 1> /dev/null
             else
                 error "The filename, $FILE, does not exist"
             fi
         ;;
+        append)
+            export PATH="$2:$PATH"
     esac
 }
 
