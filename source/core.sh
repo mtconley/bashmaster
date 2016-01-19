@@ -46,13 +46,14 @@ bashmaster(){
             update)
                 name=`uname -n`
                 now=`date +%Y-%m-%d-%H:%M`
-                ( cd $BASH_DIR && git merge master )
-                ( cd $BASH_DIR && git checkout master )
-                ( cd $BASH_DIR && git pull origin master )
-                ( cd $BASH_DIR && git checkout $name )
-                ( cd $BASH_DIR && git checkout master ./source/core.sh )
-                ( cd $BASH_DIR && git add ./source/core.sh )
-                ( cd $BASH_DIR && git commit -m "$now: update core.sh from master" )
+                ( cd $BASH_DIR && 
+                  git merge master &&
+                  git checkout master && 
+                  git pull origin master && 
+                  git checkout $name &&
+                  git checkout master ./source/core.sh &&
+                  git add ./source/core.sh &&
+                  git commit -m "$now: update core.sh from master" )
             ;;
             -h|--help)
                 echo -e "usage: bashmaster"
