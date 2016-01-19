@@ -86,19 +86,10 @@ if __name__=='__main__':
     name, date = parse_input(sys.argv)
 
     dir_dict = {'ipynbs': None, 
-<<<<<<< HEAD
-                 'scripts': None, 
-                 'results': {'data': None, 
-                             'figures': None, 
-                             'model': None,
-                             'notes': None,
-                             'html': None}}
-=======
                 'scripts': None, 
                 'notes': None,
                 'results': {'data': None, 
                             'figures': None, 
                             'model': None,
                             'html': None}}
->>>>>>> master
     make_project(name, date, dir_dict=dir_dict)
