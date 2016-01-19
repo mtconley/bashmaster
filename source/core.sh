@@ -46,6 +46,7 @@ bashmaster(){
             update)
                 name=`uname -n`
                 now=`date +%Y-%m-%d-%H:%M`
+                ( cd $BASH_DIR && git merge master )
                 ( cd $BASH_DIR && git checkout master )
                 ( cd $BASH_DIR && git pull origin master )
                 ( cd $BASH_DIR && git checkout $name )
