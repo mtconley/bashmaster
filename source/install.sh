@@ -8,6 +8,10 @@ install_new_profile(){
     . ~/.bash_profile
 }
 
+archive_profile() {
+    bash $BASH_DIR/source/archive.sh;
+}
+
 make_new_branch(){
     name=`uname -n`
     (cd $BASH_DIR && git checkout -b $name)
@@ -16,6 +20,12 @@ make_new_branch(){
     (cd $BASH_DIR && git push origin $name)
 }
 
+add_pre_commit_hook(){
+    PRE_COMMIT=$BASH_DIR/.git/hooks/pre-commit 
+    cat ./pre-commit >> $PRE_COMMIT
+}
+
 make_new_branch
-bash $BASH_DIR/source/archive.sh
+archive_profile
 install_new_profile
+add_pre_commit_hook
