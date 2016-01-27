@@ -1,4 +1,4 @@
 #!/bin/bash
 domtop() {
-    command expect ./domtop.exp
-}
+    command expect $BASH_DIR/dotfile/scripts/domtop.exp
+
