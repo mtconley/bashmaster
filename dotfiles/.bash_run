@@ -6,6 +6,7 @@ load_script_dir() { for i in `ls -ap $@ | grep -v /`; do load_script "$@/$i"; do
 
 # Load bash script files
 load_script_dir $BASH_DIR/dotfiles/scripts
+load_script_dir $BASH_DIR/dotfiles/script_ignore
 
 # Load bash export files
 load_file_dir $BASH_DIR/dotfiles/configs
